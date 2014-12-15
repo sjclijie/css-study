@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #333;
+}
+
+.box {
+    width: 800px;
+    height: 280px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.box .link {
+    width: 220px;
+    height: 280px;
+    float: left;
+    margin: 0 20px;
+    border: 1px solid black;
+}
+
+.link .icon {
+    display: inline-block;
+    width: 100%;
+    height: 180px;
+    -webkit-transition: all .25s ease-out;
+       -moz-transition: all .25s ease-out;
+        -ms-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+}
+
+.link .icon:hover {
+    -webkit-transform: rotate(360deg) scale(1.2);
+       -moz-transform: rotate(360deg) scale(1.2);
+        -ms-transform: rotate(360deg) scale(1.2);
+         -o-transform: rotate(360deg) scale(1.2);
+            transform: rotate(360deg) scale(1.2);
+}
+ 
+.link-miss .icon {
+    background: url(../images/mission.png) no-repeat center center;
+}
+
+.link-play .icon{
+    background: url(../images/play.png) no-repeat center center;
+}
+
+.link-touch .icon{
+    background: url(../images/touch.png) no-repeat center center;
+}
+
+.button {
+    display: inline-block;
+    height: 50px;
+    line-height: 42px;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.8);
+    font-weight: bold;
+    width: 180px;
+    color: #2dcb70;
+    margin-top: 20px;
+    margin-left: 22px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    -ms-box-sizing:  border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background: url(../images/allow.png) no-repeat 100px center;
+    -webkit-transition: border-color .25s ease-in;
+       -moz-transition: border-color .25s ease-in;
+        -ms-transition: border-color .25s ease-in;
+         -o-transition: border-color .25s ease-in;
+            transition: border-color .25s ease-in;
+    -webkit-transition: background-position .25s ease;
+       -moz-transition: background-position .25s ease;
+        -ms-transition: background-position .25s ease;
+         -o-transition: background-position .25s ease;
+            transition: background-position .25s ease;
+}
+
+.button:hover {
+    border-color: rgba(255,255,255,1);
+    background-position: 130px;
+}
+
+.line {
+    display: block;
+    background:none;
+    position: relative;
+    -webkit-transition: all .25s ease-in;
+       -moz-transition: all .25s ease-in;
+        -ms-transition: all .25s ease-in;
+         -o-transition: all .25s ease-in;
+            transition: all .25s ease-in;
+}
+
+.button:hover .line{
+    background: rgba(255,255,255,0.5);
+}
+
+.button .line-top {
+    left: -100%;
+    width: 0;
+    height: 2px;
+    top: -2px;
+}
+
+.button:hover .line-top {
+    left: -20px;
+    width: 100%;
+}
+
+.button .line-right {
+    width: 2px;
+    height: 0;
+    float: right;
+    top: -50px;
+    right: -2px;
+}
+
+.button:hover .line-right {
+    height: 50px;
+    top: -4px;
+}
+
+.button .line-bottom {
+    width: 154px;
+    height: 2px;
+    top: 44px;
+    right: -100px;
+}
+
+.button:hover .line-bottom {
+    right: -2px;
+    width: 154px;
+}
+
+.button .line-left {
+    width: 2px;
+    height: 50px;
+    float: right;
+    top: 100%;
+    left: -174px;
+}
+.button:hover .line-left {
+    top: -6px;
+}
+
+.box .tip {
+    height: 35px;
+    background: #2dcb70;
+    line-height: 35px;
+    position: absolute;
+    color: #fff;
+    border-radius: 3px;
+    top: 120px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.tip em {
+    font-style: normal;
+    padding: 0 14px;
+}
+
+.tip span {
+    display: block;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top-color: #2dcb70;
+    position: absolute;
+    left: 50%;
+    margin-left: -8px;
+}
+
+
+
+

@@ -1,190 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Demo1</title>
-		<style type="text/css" media="screen">
-			
-			body{
-				background-color: #234353;
-			}
+    <head>
+        <meta charset="utf-8" />
+        <!--<meta http-equiv="content-type" content-type="text/html;charset=utf-8" />-->
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script type="text/javascript" src="../../lib/jquery/jquery-1.11.1.js"></script>
+    </head>
+    <body>
+        
+        <div class="box">
+    
+            <div class="link link-miss">
+                <span class="icon"></span>
+                <a href="#" class="button" data="miss miss miss">
+                    <span class="line line-top"></span>
+                    <span class="line line-right"></span>
+                    <span class="line line-bottom"></span>
+                    <span class="line line-left"></span>
+                    MISSION
+                </a>
+            </div>
 
-			.inbox{
-				width: 200px;
-				height: 300px;
-				border: 1px solid #000;
-				float: left;
-				margin-left: 50px;
-				position: relative;
-			}
+            <div class="link link-play">
+                <span class="icon"></span>
+                <a href="#" class="button" data="play play play">
+                    <span class="line line-top"></span>
+                    <span class="line line-right"></span>
+                    <span class="line line-bottom"></span>
+                    <span class="line line-left"></span>
+                    PLAY
+                </a>
+            </div>
 
-			a{
-				display: inline-block;
-				width: 140px;
-				height: 25px;
-				border: 2px solid rgba(255,255,255,0.5);
-				text-decoration: none;
-				color: #2b74da;
-				font-family: Calibri;
-				font-size: 16px;
-				position: absolute;
-				bottom: 20px;
-				left: 50%;
-				margin-left: -70px;
-				text-align: center;
-				line-height: 25px;
-				-webkit-transition: all .5s ease;
-				   -moz-transition: all .5s ease;
-				    -ms-transition: all .5s ease;
-				     -o-transition: all .5s ease;
-				        transition: all .5s ease;
-			}
+            <div class="link link-touch">
+                <span class="icon"></span>
+                <a href="#" class="button" data="touch touch touch">
+                    <span class="line line-top"></span>
+                    <span class="line line-right"></span>
+                    <span class="line line-bottom"></span>
+                    <span class="line line-left"></span>
+                    TOUCH
+                </a>
+            </div>
 
-			a:hover {
-				border-color: rgba(255,255,255,1);
-				font-size: 20px;
-				-webkit-transform: rotate(10deg);
-				   -moz-transform: rotate(10deg);
-				    -ms-transform: rotate(10deg);
-				     -o-transform: rotate(10deg);
-				        transform: rotate(10deg);
-			}
+            <div class="tip"><em>aaaaaaaaa</em><span></span></div>
+            
+        </div>
+        <script type="text/javascript">
 
-			.line {
-				position: absolute;
-				-webkit-transition: all .25s ease;
-				   -moz-transition: all .25s ease;
-				    -ms-transition: all .25s ease;
-				     -o-transition: all .25s ease;
-				        transition: all .25s ease;
-			}
+            jQuery(document).ready(function($) {
+                
+                $(".box .button").hover(function() {
 
-			.line-top {
-				width: 0;
-				height: 2px;
-				background: none;
-				top: -2px;
-				left: -100px;
-			}
+                    var title = $(this).attr('data');
 
-			a:hover .line-top{
-				width: 100%;
-				background: rgba(255,255,255,1);
-				left: 0;
-			}
+                    $('.tip em').html(title);
 
-			.line-bottom {
-				width: 0;
-				height: 2px;
-				background:none;
-				bottom: -2px;
-				right: -100px;
-			}
+                    var pos = $(this).position();
 
-			a:hover .line-bottom{
-				right: 0;
-				width: 100%;
-				background: rgba(255,255,255,1);
-			}
+                    var btnWidth = $(this).outerWidth();
 
-			.line-right{
-				width: 2px;
-				height: 100%;
-				background:none;
-				top: -100%;
-				right: -2px;	
-			}
+                    var tipWidth = $('.tip em').outerWidth();
 
-			a:hover .line-right{
-				background: rgba(255,255,255,1);
-				height: 100%;
-				top: 0;
-			}
+                    var left = pos.left + 20 + (btnWidth - tipWidth) / 2;
 
-			.line-left{
-				width: 2px;
-				background:none;
-				top: 100%;
-				left: -2px;	
-			}
+                    $('.tip').css({'left':left,"top":120}).animate({"opacity":1,"top":150},300);
 
-			a:hover .line-left{
-				height: 100%;
-				top: 0;
-				background: rgba(255,255,255,1);
-			}
+                }, function() {
 
-			.inbox .traingle{
-				width: 0;
-				height: 0;
-				border: 10px solid transparent;
-				border-top-color: red;
-				position: absolute;
-				left: 50%;
-				top: 50%;
-				margin-left: -10px;
-				margin-top: -10px;
-				-webkit-transition: all .25s linear;
-				   -moz-transition: all .25s linear;
-				    -ms-transition: all .25s linear;
-				     -o-transition: all .25s linear;
-				        transition: all .25s linear;
-			}
+                    $('.tip').animate({"opacity": 0, "top": 120}, 300)
 
-			.inbox .traingle:hover{
-				-webkit-transform: rotate(180deg);
-				   -moz-transform: rotate(180deg);
-				    -ms-transform: rotate(180deg);
-				     -o-transform: rotate(180deg);
-				        transform: rotate(180deg);
-			}
+                });
 
-		</style>
-	</head>
-	<body>
-		
-		<div class="box">
-			
-			<div class="inbox">
-				<span></span>
-				<a href="#">
-				<span class="line line-top"></span>
-				<span class="line line-right"></span>
-				<span class="line line-bottom"></span>
-				<span class="line line-left"></span>
-				MISS</a>
-			</div>
-			
+            });
 
-			<div class="inbox">
-				<span></span>
-				<a href="#">
-					<span class="line line-top"></span>
-					<span class="line line-right"></span>
-					<span class="line line-bottom"></span>
-					<span class="line line-left"></span>
-				PLAY</a>
-			</div>
-			
-
-			<div class="inbox">
-				<span></span>
-				<a href="#">
-					<span class="line line-top"></span>
-					<span class="line line-right"></span>
-					<span class="line line-bottom"></span>
-					<span class="line line-left"></span>
-				DEMO</a>
-			</div>
-
-			<div class="inbox">
-				<div class="traingle">
-					
-				</div>
-			</div>
-
-		</div>
-
-
-	</body>
+        </script>
+    </body>
 </html>
