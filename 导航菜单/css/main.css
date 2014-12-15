@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fff;
+}
+
+#topmenu {
+    width: 210px;
+    border: 2px solid #E4393C;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    position: relative;
+}
+
+#topmenu .menutitle {
+    height: 40px;
+    background: #E4393C;
+    
+    text-align: left;
+    line-height: 40px;
+}
+
+#topmenu .menutitle a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    padding-left: 10px;
+}
+
+#topmenu ul li{
+    list-style-type: none;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    padding-left: 8px;
+    background: url(../images/README.png) no-repeat center right;
+}
+
+#topmenu ul li a {
+    height: 35px;
+    width: 100%;
+    text-decoration: none;
+    color: #523346;
+    font-size: 14px;
+}
+
+#topmenu ul li:hover {
+    border: 1px solid #ddd;
+    border-right: none;
+    box-shadow: 0 0 8px #ddd;
+    background-image: none;
+}
+
+#topmenu ul li a:hover {
+    text-decoration: underline;
+    color: #e4393c;
+}
+
+#topmenu ul li span {
+    display: block;
+    width: 5px;
+    height: 29px;
+    background: #fff;
+    z-index: 999;
+    position: relative;
+    top: -31px;
+    left: 188px;
+    display: none;
+}
+
+#topmenu ul li:hover span{
+    display: block;
+}
+
+#topmenu ul li .submenu {
+    width: 705px;
+    height: 440px;
+    position: absolute;
+    background: none;
+    left: 200px;
+    top: 40px;
+    display: none;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 8px #ddd;
+}
+
+#topmenu ul li:hover .submenu {
+    background: #fff;
+    display: block;
+}
+
+
