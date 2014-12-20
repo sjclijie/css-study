@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#box {
+    width: 550px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.top {
+    height: 40px;
+}
+
+.top a{
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    border: 1px solid #ccc;
+    float: right;
+    margin: 10px 5px;
+}
+
+
+.top .btn-list-off, .top .btn-list-on{
+    background: #aaa;
+}
+
+.top .btn-card-off, .top .btn-card-on{
+    background: #ccc;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#box ul li {
+    width: 164px;
+    border: 1px solid #ccc;
+    float: left;
+    margin: 8px;
+    box-shadow: 0 0 10px #ccc;
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+
+#box .img-a {
+    width: 164px;
+    height: 164px;
+    display: block;
+    overflow: hidden;
+}
+
+#box ul li:hover {
+    box-shadow: 10px 10px 10px #ccc;
+}
+
+#box a.name-a {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    color: #3374A5;
+    text-decoration: none;
+    padding-left: 15px;
+    margin-top: 5px;
+}
+
+#box p {
+    display: block;
+    margin: 0;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    padding-left: 15px;
+    color: #666F74;
+}
+
+#box span {
+    display: block;
+    margin: 0;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    padding-left: 15px;
+    color: #666F74;
+    margin-bottom: 5px;
+}
+
+#box .bottom {
+    height: 30px;
+    line-height: 30px;
+    background: #F2F2F2;
+    border-top: 1px solid #ccc;
+}
+
+#box .bottom a{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    display: block;
+    width: 97px;
+    height: 30px;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: none;
+    border-top: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #666;
+    background: rgba(255,255,255,0.1);
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+
+#box .bottom a:hover{
+    background: rgba(255,255,255,1);
+}
+
+
