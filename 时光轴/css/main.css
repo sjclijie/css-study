@@ -1,0 +1,211 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url(../images/bg.jpg) no-repeat;
+    background-attachment: fixed;
+    padding-top: 41px;
+}
+
+.top {
+    width: 100%;
+    height: 41px;
+    background: #001e3b;
+    box-shadow: 0 1px 1 rgba(0,0,0,0.2);
+    position: fixed;top: 0;
+    z-index: 1111;
+}
+
+.header {
+    width: 960px;
+    height: 200px;
+    background: rgba(255,255,255,0.2);
+    margin: 0 auto;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.srcubber {
+    width: 50px;
+    min-height: 200px;
+    background: rgba(0,0,0,0.2);
+    position: absolute;
+    top: 29px;
+    left: 0;
+    z-index: 999;
+}
+
+.srcubber a{
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    font-size: 12px;
+    color: #a5a4a4;
+    text-decoration: none;
+    text-align: right;
+    padding-right: 5px;
+    border-right: 2px solid #c8c8c8;
+    border-right-color: rgba(200,200,200,0.5);
+}
+
+.srcubber a.current{
+    border-right-color: #7EBAD0;
+    color: #7EBAD0;
+    font-weight: bold;
+}
+
+.srcubber a:hover {
+    text-decoration: underline;
+    border-right-color: #7EBAD0;
+    color: #7EBAD0;
+    font-weight: bold;
+}
+
+.content {
+    padding-top: 50px;
+    padding-left: 160px;
+    min-height: 1000px;
+    background: url(../images/spine.png) repeat-y 121px;
+    position: relative;
+    z-index: 99;
+}
+
+.content .content_month{
+    position: absolute;
+    left: 72px;
+    color: #A5A5A5;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.content .content_year {
+    position: absolute;
+    left: 60px;
+    color: #a5a5a5;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.content .conetnt_item {
+    background: #fff;
+    width: 370px;
+    min-height: 400px;
+    border-radius: 4px 4px 4px 4px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.content .conetnt_item .content_item_icon_arrow{
+    width: 0;height: 0;
+    border: 7px solid transparent;
+    border-right-color: #fff;   
+    position: absolute;
+    left: -14px; top: 20px;
+}
+
+.content .conetnt_item .content_item_icon_dot{
+    width: 11px;
+    height: 11px;
+    border-radius: 11px;
+    background: #fff;
+    position: absolute;
+    left: -43px;
+    top: 24px;
+    line-height: 11px;
+    text-align: center;
+}
+
+.content .conetnt_item .content_item_icon_dot span {
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 7px;
+    background: #7EBAD0;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+}
+
+.content .conetnt_item .content_item_head {
+    padding-top: 25px;
+}
+
+.content .conetnt_item .content_item_head .content_item_head_title {
+    width: 340px;
+    height: 46px;
+    line-height: 46px;
+    margin: 0 auto;
+    color: #ABABAB;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3";
+}
+
+.content .conetnt_item .content_item_head .content_item_head_title span {
+    display: block;
+    width: 46px;
+    height: 46px;
+    line-height: 22px;
+    background: rgb(146, 202, 222);
+    float: left;
+    color: #fff;
+    margin-right: 10px;
+    border-radius: 7px 7px 7px 7px;
+}
+
+.content .conetnt_item .content_item_head .intro {
+    width: 340px;
+    margin:0 auto;
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgb(136, 136, 136);
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+.content .conetnt_item .content_item_media {
+    height: 227px;
+    overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.content .conetnt_item .content_item_footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #ccc;
+    width: 340px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #999;
+    font-weight: bold;
+}
+
+.content .conetnt_item .content_item_footer .feed{
+    height: 25px;
+    line-height: 25px;
+}
+
+.content .conetnt_item .content_item_footer .like{
+    height: 25px;
+    line-height: 25px;
+}
+
+
+
+.ui_icon {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    font-size: 0px;
+    overflow: hidden;
+    background-image: url();
+}
+

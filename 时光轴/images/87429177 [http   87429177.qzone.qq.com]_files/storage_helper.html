@@ -1,0 +1,50 @@
+
+<!-- saved from url=(0071)http://ctc.qzs.qq.com/ac/qzfl/release/resource/html/storage_helper.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>storage helper</title>
+	<style type="text/css"></style></head>
+	<body onload="init();">
+		<script type="text/javascript">
+			
+			if(location.host.indexOf("qzone.qq.com")>=0){
+				document.domain = "qzone.qq.com";
+			}else{
+				document.domain = "qq.com";
+			}
+			//创建数据库
+			function create(dbname, type){
+				if(type == "localStorage"){
+					return window.localStorage;
+				}
+				try {
+					/*
+					var el = document.createElement("div");
+					el.id = dbname+"_userData";
+					el.style.display = "none";
+					el.addBehavior("#default#userdata");
+					document.body.appendChild(el);
+					*/
+					var el = document.body; 
+					el.addBehavior("#default#userdata");
+					el.load(dbname);
+					return el;
+				} 
+				catch (ign) {
+					return false;
+				}
+			}
+
+			
+			function init(){
+			    var tmp;
+				if((tmp = parent.QZFL.Storage)) {
+					tmp.ifrCallback();
+				}else if((tmp = parent.jQuery) && tmp.Storage){
+				    tmp.Storage.ifrCallback();
+				}
+			}
+		</script>
+	
+
+<!--[if !IE]>|xGv00|0f231795713fed1e99798eda968086aa<![endif]--></body></html>
