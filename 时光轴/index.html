@@ -6,14 +6,30 @@
     <title>Document</title>
 </head>
 <body>
+   
+    <div class="hide">
+
+        <div id="tpl_srcubber_year">
+            <a href="#" class="srcubber_year">{year}</a>
+            {list}
+        </div>
+        
+        <div id="tpl_srcubber_month">
+            <a href="#" class="srcubber_month">{month}</a>
+        </div>
+        
+    </div>
+   
     <div class="top"></div>
     <div class="header"></div>
     <div class="container">
-        <div class="srcubber">
+       
+        <div class="srcubber" id="srcubberId">
             <a href="#" class="srcubber_year current">2014年</a>
             <a href="#" class="srcubber_month">8月</a>
             <a href="#" class="srcubber_month">9月</a>
         </div> 
+        
         <div class="content">
             
             <div class="content_year">2014年</div>
@@ -81,5 +97,61 @@
         </div>
 
     </div>
+    <script src="script/GetLunarDay.js"></script>
+    <script src="script/data.js"></script>
+    <script>
+        
+        var tpl_year = document.getElementById("tpl_srcubber_year").innerHTML;
+        
+        var tpl_month = document.getElementById("tpl_srcubber_month").innerHTML;
+        
+        var list = {};
+        
+        for (var i = 0; i<data.length; i++){
+            
+            var date = new Date( data[i]["date"] );
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var lunar = GetLunarDateString(date);
+            
+            if (!list[year]) {
+                list[year] = [];
+            }
+            
+            if (!list[year][month]){
+                list[year][month] = [];
+            }
+            
+            var item = {};
+            
+            item = {
+                "lunar": lunar[0] + "<br />&nbsp;&nbsp;&nbsp;" + lunar[1],
+                "year": year,
+                "month": month,
+                "like_format": data[i].like < 1000 ? data[i].like : (data[i].like / 1000 ).toFixed(1) + "万"
+            };
+            
+            list[year][month].push(item);
+        }
+        
+        year_html = [];
+        
+        for (y in list){
+            
+            month_tpl = [];
+            
+            for (m in list[y]){
+                month_tpl.unshift(tpl_month.replace(/\{month\}/g, m));
+            }
+            
+            year_html.unshift(tpl_year.replace(/\{year\}/g, y).replace(/\{list\}/g, month_tpl.join("")));
+        }
+        
+        document.getElementById("srcubberId").innerHTML = year_html.join("");
+        
+        //console.log(list);
+        
+        
+    </script>
 </body>
 </html>

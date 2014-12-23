@@ -197,8 +197,6 @@ body {
     line-height: 25px;
 }
 
-
-
 .ui_icon {
     width: 15px;
     height: 15px;
@@ -207,5 +205,9 @@ body {
     font-size: 0px;
     overflow: hidden;
     background-image: url();
+}
+
+.hide {
+    display: none;
 }
 
