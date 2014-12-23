@@ -121,7 +121,6 @@ body{
 .container .left .submenu {
     height: 30px;
     background: #eee;
-    border: 1px solid #ccc;
 }
 
 .container .left .submenu ul{
@@ -162,7 +161,117 @@ body{
     text-decoration: underline;
 }
 
+.container .main .list{
+    height: 70px;
+    border-bottom: 1px solid #ccc;
+}
 
+.container .main .list .content{
+    padding: 10px 0;
+    height: 50px;
+}
+
+.container .main .list .pic{
+    width: 50px;
+    height: 50px;
+    float: left;
+    border-radius: 10px;
+    margin: 0 5px;
+}
+
+.container .main .list .pic img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.container .main .list .title {
+    width: 80%;
+    font-size: 16px;
+    color: #666;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+}
+
+.container .main .list .post {
+    float: left;
+    height: 25px;
+    line-height: 25px;
+}
+
+.container .main .list .post a.category {
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 12px;
+    color: #999999;
+    background: #F5F5F5;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+
+.container .main .list .post a.category:hover {
+    background: #ccc;
+}
+
+.container .main .list .post a.author {
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 12px;
+    color: #778087;
+    border-radius: 2px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.container .main .list .post a.author:hover{
+    text-decoration: underline;
+    color: #999;
+}
+
+.container .main .list .post span.postTime{
+    color: #ccc;
+    margin-right: 5px;
+}
+
+.container .main .list .post span.lastRelay{
+    color: #ccc;
+    margin-right: 5px;
+}
+
+.container .main .list .post span.lastRelay em{
+    font-style: normal;
+    font-weight: bold;
+    color: #7780A5;
+    margin-left: 5px;
+}
+
+.container .main .list .content .tip {
+    overflow: hidden;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.container .main .list .content .tip a {
+    text-decoration: none;
+    display: inline-block;
+    height: 20px;
+    width: 30px;
+    line-height: 20px;
+    border-radius: 10px;
+    background: #AAB0C6;
+    font-weight: bold;
+    color: #fff;
+}
+
+.container .main .list .content .tip a:hover {
+    background: #ccc;
+}
 
 
 
